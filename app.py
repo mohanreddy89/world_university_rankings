@@ -9,7 +9,7 @@ st.set_page_config(page_title="University Rankings", page_icon=":mortar_board:",
 @st.cache
 def get_university_data():
     # Replace the following path with the path to your university ranking data (Excel file)
-    data_path = "universityrankings.xlsx"
+    data_path = "university_rankings.xlsx"
     df = pd.read_excel(data_path)
     df["year"] = df["year"].astype(int)  # Convert 'year' column to integer
     return df
